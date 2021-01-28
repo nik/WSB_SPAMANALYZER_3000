@@ -65,9 +65,6 @@ func lookUpUser(username string) {
 		return
 	}
 
-	// bodyBytes, _ := ioutil.ReadAll(response.Body)
-	// fmt.Println(string(bodyBytes))
-
 	dec := json.NewDecoder(response.Body)
 	var c commenter
 	err = dec.Decode(&c)
